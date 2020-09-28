@@ -1,0 +1,315 @@
+
+\usepackage[colorlinks=true,bookmarks=false,linkcolor=blue,urlcolor=blue,citecolor=blue,breaklinks=true]{hyperref}
+\usepackage{breakcites}
+
+\usepackage{doi}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floorr}{\lfloor}{\rfloor}
+
+\usepackage{color}
+%\usepackage{url}
+\usepackage{bm} % bold math fonts with \bm{math expr}
+\usepackage{dsfont} % blackboard bold ones
+
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\definecolor{mycolor1}{rgb}{0.105882,0.619608,0.466667}
+\definecolor{mycolor2}{rgb}{0.85098,0.372549,0.00784314}
+\definecolor{mycolor3}{rgb}{0.458824,0.439216,0.701961}
+\definecolor{mycolor4}{rgb}{0.905882,0.160784,0.541176}
+\definecolor{mycolor5}{rgb}{0.4,0.65098,0.117647}
+\definecolor{mycolor6}{rgb}{0.65098,0.462745,0.113725}
+\definecolor{mycolor7}{rgb}{0.901961,0.670588,0.00784314}
+\definecolor{mycolor8}{rgb}{0.4,0.4,0.4}
+\definecolor{mycolor9}{rgb}{0.301961,0,0.294118}
+\definecolor{mycolor10}{rgb}{0.0313725,0.25098,0.505882}    
+
+
+% use in a table cell to authorize linebreaks with \\ %
+% http://tex.stackexchange.com/questions/2441/how-to-add-a-forced-line-break-inside-a-table-cell
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}#1@{}}#2\end{tabular}}
+
+
+\usepackage{psfrag}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+% Do-While construct
+\algdef{SE}[DOWHILE]{Do}{doWhile}{\algorithmicdo}[1]{\algorithmicwhile\ #1}%
+
+\usepackage{mathrsfs} % for \mathscr{ABC} style (curly calligraphy)
+
+\newcommand{\ER}{{Erd\H{o}s-R\'enyi }}
+\newcommand{\argmin}[1]{\underset{#1}{\operatorname{argmin}}}
+\newcommand{\argmax}[1]{\underset{#1}{\operatorname{argmax}}}
+\newcommand{\transpose}{^\top\! }
+\newcommand{\eig}{{\mathrm{eig}}}
+\newcommand{\mle}{{\mathrm{MLE}}}
+\newcommand{\mlez}{{\mathrm{MLE0}}}
+\newcommand{\inner}[2]{\left\langle{#1},{#2}\right\rangle}
+\newcommand{\innersmall}[2]{\langle{#1},{#2}\rangle}
+\newcommand{\innerbig}[2]{\big\langle{#1},{#2}\big\rangle}
+\newcommand{\MSE}{\mathrm{MSE}}
+\newcommand{\Egood}{E_\textrm{good}}
+\newcommand{\Ebad}{E_\textrm{bad}}
+\newcommand{\trace}{\mathrm{Tr}}
+\newcommand{\Trace}{\mathrm{Tr}}
+\newcommand{\spann}{\mathrm{span}}
+%\newcommand{\skeww}[1]{\left\lceil #1 \right\rfloor}
+\newcommand{\skeww}[1]{\operatorname{skew}\!\left( #1 \right)}
+\newcommand{\symmop}{\operatorname{sym}}
+\newcommand{\symm}[1]{\symmop\!\left( #1 \right)}
+\newcommand{\symmsmall}[1]{\symmop( #1 )}
+%\newcommand{\vecc}{\mathrm{vec}}
+\newcommand{\veccc}[1]{\vecc\left({#1}\right)}
+\newcommand{\sbdop}{\operatorname{symblockdiag}}
+\newcommand{\sbd}[1]{\sbdop\!\left({#1}\right)}
+\newcommand{\sbdsmall}[1]{\sbdop({#1})}
+\newcommand{\RMSE}{\mathrm{RMSE}}
+\newcommand{\Stdpm}{\St(d, p)^m}
+\newcommand{\proj}{\mathrm{proj}}
+\newcommand{\Proj}{\mathrm{Proj}}
+\newcommand{\ProjH}{\mathrm{Proj}^h}
+\newcommand{\ProjV}{\mathrm{Proj}^v}
+\newcommand{\Exp}{\mathrm{Exp}}
+\newcommand{\Log}{\mathrm{Log}}
+\newcommand{\expect}{\mathbb{E}}
+\newcommand{\expectt}[1]{\mathbb{E}\left\{{#1}\right\}}
+%\newcommand{\R}{\mathrm{R}}
+\newcommand{\Retr}{\mathrm{R}}
+\newcommand{\inj}{\mathrm{inj}}
+\newcommand{\Trans}{\mathrm{Transport}}
+\newcommand{\Transbis}[2]{\mathrm{Transport}_{{#1}}({#2})}
+\newcommand{\polar}{\mathrm{polar}}
+\newcommand{\qf}{\mathrm{qf}}
+\newcommand{\Gr}{\mathrm{Gr}}
+\newcommand{\St}{\mathrm{St}}
+\newcommand{\GLr}{{\mathbb{R}^{r\times r}_*}}
+\newcommand{\Precon}{\mathrm{Precon}}
+\newcommand{\T}{\mathrm{T}}
+\newcommand{\N}{\mathrm{N}}
+\newcommand{\HH}{\mathrm{H}}
+\newcommand{\VV}{\mathrm{V}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\barM}{\overline{\mathcal{M}}}
+\newcommand{\barnabla}{\overline{\nabla}}
+\newcommand{\barf}{{\overline{f}}}
+\newcommand{\barx}{{\overline{x}}}
+\newcommand{\bary}{{\overline{y}}}
+\newcommand{\barX}{{\overline{X}}}
+\newcommand{\barY}{{\overline{Y}}}
+\newcommand{\barg}{{\overline{g}}}
+\newcommand{\barxi}{{\overline{\xi}}}
+\newcommand{\bareta}{{\overline{\eta}}}
+\newcommand{\p}{\mathcal{P}}
+\newcommand{\SOn}{{\mathrm{SO}(n)}}
+\newcommand{\On}{{\mathrm{O}(n)}}
+\newcommand{\Od}{{\mathrm{O}(d)}}
+\newcommand{\Op}{{\mathrm{O}(p)}}
+\newcommand{\son}{{\mathfrak{so}(n)}}
+\newcommand{\SOt}{{\mathrm{SO}(3)}}
+\newcommand{\sot}{{\mathfrak{so}(3)}}
+\newcommand{\SOtwo}{{\mathrm{SO}(2)}}
+\newcommand{\sotwo}{{\mathfrak{so}(2)}}
+\newcommand{\So}{{\mathbb{S}^{1}}}
+\newcommand{\Stwo}{{\mathbb{S}^{2}}}
+\newcommand{\Sp}{{\mathbb{S}^{2}}}
+\newcommand{\Rtt}{{\mathbb{R}^{3\times 3}}}
+\newcommand{\Snn}{{\mathbb{S}^{n\times n}}}
+\newcommand{\Smm}{{\mathbb{S}^{m\times m}}}
+\newcommand{\Smdmd}{{\mathbb{S}^{md\times md}}}
+\newcommand{\Spp}{{\mathbb{S}^{p\times p}}}
+\newcommand{\Sdd}{{\mathbb{S}^{d\times d}}}
+\newcommand{\Srr}{{\mathbb{S}^{r\times r}}}
+\newcommand{\Rnn}{{\mathbb{R}^{n\times n}}}
+\newcommand{\Rnp}{{\mathbb{R}^{n\times p}}}
+\newcommand{\Rdp}{{\mathbb{R}^{d\times p}}}
+\newcommand{\Rmn}{{\mathbb{R}^{m\times n}}}
+\newcommand{\Rnm}{\mathbb{R}^{n\times m}}
+\newcommand{\Rnr}{\mathbb{R}^{n\times r}}
+\newcommand{\Rrr}{\mathbb{R}^{r\times r}}
+\newcommand{\Rpp}{\mathbb{R}^{p\times p}}
+\newcommand{\Rmm}{{\mathbb{R}^{m\times m}}}
+\newcommand{\Rmr}{\mathbb{R}^{m\times r}}
+\newcommand{\Rrn}{{\mathbb{R}^{r\times n}}}
+\newcommand{\Rd}{{\mathbb{R}^{d}}}
+\newcommand{\Rp}{{\mathbb{R}^{p}}}
+\newcommand{\Rk}{{\mathbb{R}^{k}}}
+\newcommand{\Rdd}{{\mathbb{R}^{d\times d}}}
+\newcommand{\RNN}{{\mathbb{R}^{N\times N}}}
+\newcommand{\reals}{{\mathbb{R}}}
+\newcommand{\complex}{{\mathbb{C}}}
+\newcommand{\Rn}{{\mathbb{R}^n}}
+\newcommand{\Rm}{{\mathbb{R}^m}}
+\newcommand{\Cn}{\mathbb{C}^n}
+\newcommand{\Cnn}{\mathbb{C}^{n\times n}}
+\newcommand{\Cm}{{\mathbb{C}^m}}
+\newcommand{\CN}{{\mathbb{C}^{\,N}}}
+\newcommand{\CNN}{{\mathbb{C}^{\ N\times N}}}
+\newcommand{\CnotR}{{\mathbb{C}\ \backslash\mathbb{R}}}
+\newcommand{\grad}{\mathrm{grad}}
+\newcommand{\Hess}{\mathrm{Hess}}
+\newcommand{\vecc}{\mathrm{vec}}
+\newcommand{\sign}{\mathrm{sign}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\D}{\mathrm{D}}
+\newcommand{\dt}{\mathrm{d}t}
+\newcommand{\dq}{\mathrm{d}q}
+\newcommand{\dphi}{\mathrm{d}\phi}
+\newcommand{\Ddt}{\frac{\D}{\dt}}
+\newcommand{\Ddttwo}{\frac{\D^2}{\dt^2}}
+\newcommand{\Ddq}{\frac{\D}{\dq}}
+\newcommand{\ddt}{\frac{\mathrm{d}}{\mathrm{d}t}}
+\newcommand{\dds}{\frac{\mathrm{d}}{\mathrm{d}s}}
+\newcommand{\ds}{\mathrm{d}s}
+\newcommand{\du}{\mathrm{d}u}
+\newcommand{\dtau}{\mathrm{d}\tau}
+\newcommand{\dtheta}{\mathrm{d}\theta}
+\newcommand{\Dexp}{\D\!\exp}
+\newcommand{\Dlog}{\D\!\log}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calE}{\mathcal{E}}
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calK}{\mathcal{K}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\calU}{\mathcal{U}}
+\newcommand{\calV}{\mathcal{V}}
+\newcommand{\calT}{\mathcal{T}}
+\newcommand{\calH}{\mathcal{H}}
+\newcommand{\calO}{\mathcal{O}}
+\newcommand{\calM}{\mathcal{M}}
+\newcommand{\calN}{\mathcal{N}}
+\newcommand{\calS}{\mathcal{S}}
+\newcommand{\calX}{\mathcal{X}}
+\newcommand{\calW}{\mathcal{W}}
+\newcommand{\Id}{\operatorname{Id}} % need to be distinguishable from identity matrix
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\nulll}{\operatorname{null}}
+\newcommand{\col}{\operatorname{col}}
+\newcommand{\Kmax}{K_{\mathrm{max}}}
+\newcommand{\longg}{{\mathrm{long}}}
+\newcommand{\short}{{\mathrm{short}}}
+\newcommand{\Klow}{{K_{\mathrm{low}}}}
+\newcommand{\Kup}{{K_{\mathrm{up}}}}
+\newcommand{\Sn}{\mathbb{S}^{n-1}}
+
+\newcommand{\frobnormbig}[1]{\big\|{#1}\big\|_\mathrm{F}}
+%\newcommand{\frobnorm}[1]{\left\|{#1}\right\|_\mathrm{F}}
+%\newcommand{\opnorm}[1]{\left\|{#1}\right\|_\mathrm{op}}
+%\newcommand{\opnormsmall}[1]{\|{#1}\|_\mathrm{op}}
+\newcommand{\frobnormsmall}[1]{\|{#1}\|_\mathrm{F}}
+\newcommand{\smallfrobnorm}[1]{\|{#1}\|_\mathrm{F}}
+\newcommand{\norm}[1]{\left\|{#1}\right\|}
+\newcommand{\sqnorm}[1]{\left\|{#1}\right\|^2}
+%\newcommand{\sqfrobnorm}[1]{\frobnorm{#1}^2}
+\newcommand{\sqfrobnormsmall}[1]{\frobnormsmall{#1}^2}
+\newcommand{\sqfrobnormbig}[1]{\frobnormbig{#1}^2}
+
+\newcommand{\frobnorm}[2][F]{\left\|{#2}\right\|_\mathrm{#1}}
+\newcommand{\sqfrobnorm}[2][F]{\frobnorm[#1]{#2}^2}
+
+\newcommand{\dd}[1]{\frac{\mathrm{d}}{\mathrm{d}#1}}
+\newcommand{\dmu}{\mathrm{d}\mu}
+\newcommand{\pdd}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\TODO}[1]{{\color{red}{[#1]}}}
+%\newcommand{\TODOF}[1]{{\color{blue}{[#1]}}}
+\newcommand{\TODOF}[1]{}
+% \newcommand{\TODO}[1]{}
+\newcommand{\dblquote}[1]{``#1''}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\uniform}{\mathrm{Uni}}
+\newcommand{\langevin}{\mathrm{Lang}}
+\newcommand{\langout}{\mathrm{LangUni}}
+\newcommand{\Zeq}{{Z_\mathrm{eq}}}
+\newcommand{\feq}{{f_\mathrm{eq}}}
+\newcommand{\XM}{\mathfrak{X}(\M)}
+\newcommand{\FM}{\mathfrak{F}(\M)}
+\newcommand{\length}{\operatorname{length}}
+\newcommand{\bfR}{\mathbf{R}}
+\newcommand{\bfxi}{{\bm{\xi}}}
+\newcommand{\bfX}{{\mathbf{X}}}
+\newcommand{\bfY}{{\mathbf{Y}}}
+\newcommand{\bfeta}{{\bm{\eta}}}
+\newcommand{\bfF}{\mathbf{F}}
+\newcommand{\bfOmega}{\boldsymbol{\Omega}}
+\newcommand{\bftheta}{{\bm{\theta}}}
+\newcommand{\lambdamax}{\lambda_\mathrm{max}}
+\newcommand{\lambdamin}{\lambda_\mathrm{min}}
+
+
+\newcommand{\ddiag}{\mathrm{ddiag}}
+\newcommand{\dist}{\mathrm{dist}}
+\newcommand{\embdist}{\mathrm{embdist}}
+\newcommand{\var}{\mathrm{var}}
+\newcommand{\Cov}{\mathbf{C}}
+\newcommand{\Covm}{C}
+\newcommand{\FIM}{\mathbf{F}}
+\newcommand{\FIMm}{F}
+\newcommand{\Rmle}{{\hat\bfR_\mle}}
+%\newcommand{\diag}{\mathbf{\mathrm{diag}}}
+\newcommand{\Rmoptensor}{\mathbf{{R_\mathrm{m}}}}
+\newcommand{\barRmoptensor}{\mathbf{{\bar{R}_\mathrm{m}}}}
+\newcommand{\Rmop}{R_\mathrm{m}}
+\newcommand{\barRmop}{\bar{R}_\mathrm{m}}
+\newcommand{\Rcurv}{\mathcal{R}}
+\newcommand{\barRcurv}{\bar{\mathcal{R}}}
+
+\newcommand{\ith}{$i$th }
+\newcommand{\jth}{$j$th }
+\newcommand{\kth}{$k$th }
+\newcommand{\ellth}{$\ell$th }
+
+\newcommand{\expp}[1]{{\exp\!\big({#1}\big)}}
+
+\newcommand{\II}{I\!I}
+
+\newcommand{\flow}{f_{\mathrm{low}}}
+
+\newcommand{\defeq}{\triangleq}
+
+
+%\definecolor{darkgreen}{rgb}{0,.5,0}
+
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example} %[section]
+\newtheorem{definition}[theorem]{Definition} %[section]
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{claim}[theorem]{Claim}
+
+\usepackage[lmargin=3cm,rmargin=3cm,bottom=3cm,top=3cm]{geometry}
+\usepackage[ansinew]{inputenc}
+\usepackage[round,compress]{natbib}
+
+% section numbering in margin
+\usepackage{sectsty}
+\makeatletter\def\@seccntformat#1{\protect\makebox[0pt][r]{\csname the#1\endcsname\hspace{12pt}}}\makeatother
+
+\newcommand{\sigmamin}{\sigma_{\operatorname{min}}}
+\newcommand{\sigmamax}{\sigma_{\operatorname{max}}}
+\usepackage{subcaption}
+
+\usepackage{enumitem} % to enumerate with a. b. c. ... to match referee's numbering
+
+\usepackage[normalem]{ulem} % just to strike out in a response to referee
+
+% For lists with two columns
+% https://stackoverflow.com/questions/1398127/breaking-a-list-into-multiple-columns-in-latex
+\usepackage{multicol}
+
+% Use \begin{assumption} \label{assu:xyz} and \aref{assu:xyz}
+\newcommand{\aref}[1]{\hyperref[#1]{A\ref{#1}}}
+\newtheorem{assumption}{A\ignorespaces} %[section]
