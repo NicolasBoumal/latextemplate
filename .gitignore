@@ -1,5 +1,7 @@
-main.aux
-main.log
+
+*.aux
+*.bbl
+*.blg
+*.log
 main.pdf
 main.synctex.gz
-preamble.aux
