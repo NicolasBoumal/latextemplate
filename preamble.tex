@@ -13,7 +13,7 @@
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 \DeclarePairedDelimiter{\floorr}{\lfloor}{\rfloor}
 
-\usepackage{color}
+\usepackage{xcolor}
 %\usepackage{url}
 \usepackage{bm} % bold math fonts with \bm{math expr}
 \usepackage{dsfont} % blackboard bold ones
@@ -30,7 +30,16 @@
 \definecolor{mycolor7}{rgb}{0.901961,0.670588,0.00784314}
 \definecolor{mycolor8}{rgb}{0.4,0.4,0.4}
 \definecolor{mycolor9}{rgb}{0.301961,0,0.294118}
-\definecolor{mycolor10}{rgb}{0.0313725,0.25098,0.505882}    
+\definecolor{mycolor10}{rgb}{0.0313725,0.25098,0.505882}
+
+
+%%%%% Activate these in track change mode:
+%\usepackage{bigfoot} % so footnotes with page breaks retain their color ; MIGHT create issues with hyperref
+%\newcommand{\add}[1]{\text{}{\color{blue}{#1}}}
+%\newcommand{\remove}[1]{\text{}{\footnote{\color{red}{[removed: #1]}}}} % There must not be any \footnote inside of a \remove.
+%%%%% Activate these in final mode:
+%\newcommand{\add}[1]{{#1}}
+%\newcommand{\remove}[1]{}
 
 
 % use in a table cell to authorize linebreaks with \\ %
