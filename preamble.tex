@@ -70,6 +70,13 @@
 
 \usepackage{mathrsfs} % for \mathscr{ABC} style (curly calligraphy)
 
+\usepackage{matlab-prettifier} % to include Matlab code
+%\begin{lstlisting}[style=Matlab-editor]
+%    MATLAB code...
+%\end{lstlisting}
+
+\newcommand{\one}{\mathbf{1}}
+
 \newcommand{\ER}{{Erd\H{o}s-R\'enyi }}
 \newcommand{\argmin}[1]{\underset{#1}{\operatorname{argmin}}}
 \newcommand{\argmax}[1]{\underset{#1}{\operatorname{argmax}}}
@@ -105,7 +112,8 @@
 \newcommand{\Exp}{\mathrm{Exp}}
 \newcommand{\Log}{\mathrm{Log}}
 \newcommand{\expect}{\mathbb{E}}
-\newcommand{\expectt}[1]{\mathbb{E}\left\{{#1}\right\}}
+\newcommand{\expectt}[1]{\mathbb{E}\!\left\{{#1}\right\}}
+\newcommand{\expecttsmall}[1]{\mathbb{E}\{{#1}\}}
 %\newcommand{\R}{\mathrm{R}}
 \newcommand{\Retr}{\mathrm{R}}
 \newcommand{\inj}{\mathrm{inj}}
@@ -155,6 +163,7 @@
 \newcommand{\Rnn}{{\mathbb{R}^{n\times n}}}
 \newcommand{\Rnp}{{\mathbb{R}^{n\times p}}}
 \newcommand{\Rdp}{{\mathbb{R}^{d\times p}}}
+\newcommand{\Rdn}{{\mathbb{R}^{d\times n}}}
 \newcommand{\Rmn}{{\mathbb{R}^{m\times n}}}
 \newcommand{\Rnm}{\mathbb{R}^{n\times m}}
 \newcommand{\Rnr}{\mathbb{R}^{n\times r}}
@@ -224,6 +233,7 @@
 \newcommand{\Klow}{{K_{\mathrm{low}}}}
 \newcommand{\Kup}{{K_{\mathrm{up}}}}
 \newcommand{\Sn}{\mathbb{S}^{n-1}}
+\newcommand{\Sd}{\mathbb{S}^{d-1}}
 \newcommand{\Symn}{\mathrm{Sym}(n)}
 
 \newcommand{\frobnormbig}[1]{\big\|{#1}\big\|_\mathrm{F}}
