@@ -72,8 +72,10 @@
 
 \usepackage{matlab-prettifier} % to include Matlab code
 %\begin{lstlisting}[style=Matlab-editor]
-%    MATLAB code...
+%MATLAB code goes here...
 %\end{lstlisting}
+%\lstinline[style=Matlab-editor]|inline code goes here|
+\newcommand{\lstinlinematlab}[1]{\lstinline[style=Matlab-editor]{#1}}
 
 \newcommand{\one}{\mathbf{1}}
 
